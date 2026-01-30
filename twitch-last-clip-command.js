@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
         isProcessing = true;
 
         twitchEmbedClipIframe.src =
-          `https://clips.twitch.tv/embed?clip=${clipId}` +
+          `https://clips.twitch.tv/embed?clip=${encodeURIComponent(clipId)}` +
           `&parent=${currentDomain}&autoplay=true&muted=false`;
 
         setTimeout(() => {
